@@ -1,7 +1,4 @@
 // ignore_for_file: prefer_const_constructors, unused_label, use_key_in_widget_constructors, prefer_const_constructors_in_immutables, prefer_const_literals_to_create_immutables, deprecated_member_use
-
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,14 +10,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: BmiCalculator(),
     );
   }
 }
 
 class BmiCalculator extends StatefulWidget {
-  BmiCalculator({Key? key}) : super(key: key);
-
   @override
   _BmiCalculatorState createState() => _BmiCalculatorState();
 }
@@ -191,7 +187,7 @@ class _BmiCalculatorState extends State<BmiCalculator> {
               SizedBox(
                 height: 20.0,
               ),
-              Container(
+              SizedBox(
                 width: double.infinity,
                 child: Text(
                   "Your BMI is :",
